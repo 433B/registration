@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Popins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #004445, #6fb98f);
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="container"
+
+     style="max-width: 700px;
+                width: 100%;
+                background: #fff;
+                padding: 25px 30px;
+                border-radius: 5px;">
+
+    <div class="title"
+
+         style="font-size: 25px;
+         font-weight: 500;
+         position: relative;"> Registration form
+
+        <form class="form-signup" method="post" action="/api/v1/registration">
+            <div class="user-details"
+                 style="display: flex;
+                    flex-wrap: wrap;
+                    margin: 20px 0 12px 0;
+                    justify-content: space-between">
+
+                <div class="input-box"
+                     style="display: block;
+                     font-weight: 500;
+                     margin-bottom: 15px;
+
+                     width: calc(100% / 2 - 20px)">
+
+                    <label for="firstName" class="details"
+                          style="height: 45px;
+                           width: 100%;
+                           font-size: 18px
+                            ">First Name</label>
+
+                    <input type="text" id="firstName" name="firstName" class="form-control"
+                           required placeholder="Enter your first name"
+                           style="height: 45px;
+                           width: 100%;
+                           outline: none;
+                           border-radius: 5px;
+                           border: 1px solid #ccc;
+                           padding-left: 15px;
+                           font-size: 16px;">
+
+                </div>
+                <div class="input-box"
+                     style="display: block;
+                     font-weight: 500;
+                     margin-bottom: 15px;
+                     width: calc(100% / 2 - 20px)">
+
+                    <label for="lastName" class="details"
+                          style="height: 45px;
+                           width: 100%;
+                           font-size: 18px
+                           ">Last Name</label>
+
+                    <input type="text" id="lastName" name="lastName" class="form-control"
+                           required placeholder="Enter your last name"
+                           style="height: 45px;
+                           width: 100%;
+                           outline: none;
+                           border-radius: 5px;
+                           border: 1px solid #ccc;
+                           padding-left: 15px;
+                           font-size: 16px;">
+
+                </div>
+                <div class="input-box"
+                     style="display: block;
+                     font-weight: 500;
+                     margin-bottom: 15px;
+                     width: calc(100% / 2 - 20px)">
+
+                    <label for="email" class="details"
+                          style="height: 45px;
+                           width: 100%;
+                           font-size: 18px
+                           ">Email address</label>
+
+                    <input type="text" id="email" name="email" class="form-control"
+                           required placeholder="Enter your email address"
+                           style="height: 45px;
+                           width: 100%;
+                           outline: none;
+                           border-radius: 5px;
+                           border: 1px solid #ccc;
+                           padding-left: 15px;
+                           font-size: 16px;">
+
+                </div>
+                <div class="input-box"
+                     style="display: block;
+                     font-weight: 500;
+                     margin-bottom: 15px;
+                     width: calc(100% / 2 - 20px)">
+
+                    <span for="phoneNumber" class="details"
+                          style="height: 45px;
+                           width: 100%;
+                           font-size: 18px
+                           ">Phone number</span>
+
+                    <input type="number" id="phoneNumber" name="phoneNumber" class="form-control"
+                           required placeholder="Enter your phone number"
+                           style="height: 45px;
+                           width: 100%;
+                           outline: none;
+                           border-radius: 5px;
+                           border: 1px solid #ccc;
+                           padding-left: 15px;
+                           font-size: 16px;">
+
+                </div>
+                <div class="input-box"
+                     style="display: block;
+                     font-weight: 500;
+                     margin-bottom: 15px;
+                     width: calc(100% / 2 - 20px)">
+
+                    <label for="password" class="details"
+                          style="height: 45px;
+                           width: 100%;
+                           font-size: 18px
+                            ">Password</label>
+
+                    <input type="password" id="password" name="password" class="form-control"
+                           required placeholder="Enter your password"
+                           style="height: 45px;
+                           width: 100%;
+                           outline: none;
+                           border-radius: 5px;
+                           border: 1px solid #ccc;
+                           padding-left: 15px;
+                           font-size: 16px;">
+
+                </div>
+                <div class="input-box"
+                     style="display: block;
+                     font-weight: 500;
+                     margin-bottom: 15px;
+                     width: calc(100% / 2 - 20px)">
+
+                    <label for="confirmPassword" class="details"
+                          style="height: 45px;
+                           width: 100%;
+                           font-size: 18px
+                            ">Confirm password</label>
+
+                    <input type="password" id="confirmPassword" name="confirmPassword" class="form-control"
+                           required placeholder="Confirm your password"
+                           style="height: 45px;
+                           width: 100%;
+                           outline: none;
+                           border-radius: 5px;
+                           border: 1px solid #ccc;
+                           padding-left: 15px;
+                           font-size: 16px;">
+
+                </div>
+
+                <div class="button"
+                     style="height: 45px;
+                     width: 100%;
+                    margin: 45px 0;">
+
+                    <input type="submit" value="Create account" href="/api/v1/registration/ok"
+                           style="height: 100%;
+                           width: 100%;
+                    outline: none;
+                    color: #fff;
+                    border: none;
+                    font-size: 18px;
+                    font-weight: 500;
+                    border-radius: 5px;
+                    letter-spacing: 1px;
+                    background: linear-gradient(135deg, #6fb98f, #004445);">
+                </div>
+            </div>
+            <div style="text-align: center;
+                        font-size: 23px">
+                <p>Already have an account? <a
+                        style="cursor: pointer;
+                         color: blue" method="post" action="/login" href="/login">
+                    Sign in</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
